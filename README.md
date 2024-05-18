@@ -1,6 +1,12 @@
 ## about
 
-my homepage (https://homepage-two-sage.vercel.app/)
+個人用ホームページ (https://homepage-two-sage.vercel.app/)
+
+### 技術スタック
+
+- next.js
+- typescript
+- css modules
 
 #
 
