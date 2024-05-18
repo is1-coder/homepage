@@ -6,7 +6,7 @@
 
 - next.js
 - typescript
-- css modules
+- mantine
 
 #
 
