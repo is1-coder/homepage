@@ -1,7 +1,9 @@
+import { Container, Title } from "@mantine/core";
+
 export default function Home() {
   return (
-    <>
-      <h2>index page</h2>
-    </>
+    <Container>
+      <Title order={1}>index page</Title>
+    </Container>
   );
 }
