@@ -1,10 +1,15 @@
+"use client";
 import { Box, Container, Flex, Text, Center } from "@mantine/core";
 import Link from "next/link";
 import React from "react";
 import styles from "./Header.module.css";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const links = [
+  const pathname = usePathname();
+  console.log(pathname);
+
+  const menuItems = [
     { name: "About", link: "/about" },
     { name: "Work", link: "/work" },
     { name: "Blog", link: "/blog" },
@@ -26,20 +31,33 @@ const Header = () => {
           </Center>
 
           <Flex gap="xl" justify="center" h="50px">
-            {links.map((link, linkId) => {
+            {menuItems.map((menuItem, menuItemId) => {
               return (
                 <Link
-                  key={`link-${linkId}`}
-                  href={link.link}
+                  key={`link-${menuItemId}`}
+                  href={menuItem.link}
                   style={{
                     textDecoration: "none",
                     display: "flex",
                     alignItems: "center",
                     height: "100%",
                   }}
-                  className={styles.textHover}
+                  className={
+                    menuItem.link === pathname
+                      ? styles.textColor
+                      : styles.textColorHover
+                  }
                 >
-                  <Text size="md">{link.name}</Text>
+                  <Text
+                    size="md"
+                    style={
+                      menuItem.link === pathname
+                        ? { borderBottom: "1px solid black" }
+                        : {}
+                    }
+                  >
+                    {menuItem.name}
+                  </Text>
                 </Link>
               );
             })}
