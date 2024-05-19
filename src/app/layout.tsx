@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { MantineProvider } from "@mantine/core";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import Header from "@/components/header/Header";
+import "@mantine/core/styles.css";
 
 export const metadata: Metadata = {
   title: "soshida",
@@ -13,8 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        <ColorSchemeScript />
+      </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider>
+          <Header />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
