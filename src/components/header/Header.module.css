@@ -1,0 +1,6 @@
+.textHover {
+  color: #222;
+  &:hover {
+    color: #777;
+  }
+}
