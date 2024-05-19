@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { ColorSchemeScript, Container, MantineProvider } from "@mantine/core";
 import Header from "@/components/header/Header";
 import "@mantine/core/styles.css";
 
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         <MantineProvider>
           <Header />
-          {children}
+          <Container my="xl">{children}</Container>
         </MantineProvider>
       </body>
     </html>

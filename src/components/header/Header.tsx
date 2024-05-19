@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   const links = [
-    { name: "About", link: "/link" },
+    { name: "About", link: "/about" },
     { name: "Work", link: "/work" },
     { name: "Blog", link: "/blog" },
     { name: "Download", link: "/download" },
