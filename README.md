@@ -1,7 +1,3 @@
-## about
-
-個人用ホームページ (https://homepage-two-sage.vercel.app/)
-
 ### 技術スタック
 
 - next.js
