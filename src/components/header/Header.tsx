@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <header>
-      <Box h="200px" bg="#eee">
+      <Box bg="#eee">
         <Container>
           <Center h="150px">
             <Link href="/" style={{ textDecoration: "none" }}>
@@ -30,7 +30,7 @@ const Header = () => {
             </Link>
           </Center>
 
-          <Flex gap="xl" justify="center" h="50px">
+          <Flex gap="0 32px" justify="center" wrap="wrap">
             {menuItems.map((menuItem, menuItemId) => {
               return (
                 <Link
@@ -38,9 +38,7 @@ const Header = () => {
                   href={menuItem.link}
                   style={{
                     textDecoration: "none",
-                    display: "flex",
-                    alignItems: "center",
-                    height: "100%",
+                    paddingBottom: "20px",
                   }}
                   className={
                     menuItem.link === pathname
