@@ -1,10 +1,10 @@
-.textColorHover {
+.menuItemHover {
   color: #222;
   &:hover {
     color: #777;
   }
 }
 
-.textColor {
+.menuItem {
   color: #222;
 }

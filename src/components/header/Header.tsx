@@ -34,7 +34,7 @@ const Header = () => {
             {menuItems.map((menuItem, menuItemId) => {
               return (
                 <Link
-                  key={`link-${menuItemId}`}
+                  key={menuItemId}
                   href={menuItem.link}
                   style={{
                     textDecoration: "none",
@@ -42,8 +42,8 @@ const Header = () => {
                   }}
                   className={
                     menuItem.link === pathname
-                      ? styles.textColor
-                      : styles.textColorHover
+                      ? styles.menuItem
+                      : styles.menuItemHover
                   }
                 >
                   <Text
