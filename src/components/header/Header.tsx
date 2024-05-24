@@ -40,11 +40,6 @@ const Header = () => {
                     textDecoration: "none",
                     paddingBottom: "20px",
                   }}
-                  className={
-                    menuItem.link === pathname
-                      ? styles.menuItem
-                      : styles.menuItemHover
-                  }
                 >
                   <Text
                     size="md"
