@@ -29,8 +29,8 @@ const AboutPage = () => {
         </Title>
         <Box my="md">
           <Text size="lg">
-            フロントエンドではReact/Next.js、バックエンドではDjango REST
-            Frameworkを使用している。
+            フロントエンドのReact/Next.js、バックエンドのDjango REST
+            Frameworkを勉強中。
           </Text>
         </Box>
       </Box>
@@ -45,8 +45,7 @@ const AboutPage = () => {
         </Title>
         <Box my="md">
           <Text size="lg">
-            After
-            Effects/Blenderを使用している。以前はAviUtlを使っていた。Houdiniに興味あり。
+            使用ソフトはAfter EffectsとBlender。Houdiniに興味あり。
           </Text>
         </Box>
       </Box>

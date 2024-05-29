@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "./Header.module.css";
 import { usePathname } from "next/navigation";
+import { jost } from "@/utils/fonts";
 
 const Header = () => {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ const Header = () => {
   ];
 
   return (
-    <header>
+    <header className={jost.className}>
       <Box bg="#eee">
         <Container>
           <Center h="150px">
