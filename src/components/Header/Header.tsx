@@ -14,7 +14,6 @@ const Header = () => {
         position: "fixed",
         top: 0,
         backgroundColor: "#eee",
-        color: "#222",
       }}
     >
       <div
@@ -41,7 +40,7 @@ const Header = () => {
                 fontSize: "48px",
                 fontWeight: "500",
                 color: "#222",
-                letterSpacing: "2px",
+                letterSpacing: "1px",
               }}
             >
               SOSHIDA
@@ -72,8 +71,8 @@ const Header = () => {
               >
                 <p
                   style={{
-                    fontSize: "24px",
-                    fontWeight: "300",
+                    fontSize: "20px",
+                    fontWeight: "400",
                   }}
                 >
                   {item.name}
