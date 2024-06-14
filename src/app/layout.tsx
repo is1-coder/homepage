@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { ColorSchemeScript, Container, MantineProvider } from "@mantine/core";
+import "./global.css";
 import "@mantine/core/styles.css";
-import Header from "@/components/header/Header";
+import { ColorSchemeScript, Container, MantineProvider } from "@mantine/core";
+import Header from "@/components/Header/Header";
 import { notoSansJP } from "@/utils/fonts";
 
 export const metadata: Metadata = {
@@ -22,7 +23,10 @@ export default function RootLayout({
       <body className={notoSansJP.className}>
         <MantineProvider>
           <Header />
-          <Container my="xl">{children}</Container>
+          {/* Headerのheightと同じ値のmtを指定 */}
+          <Container size="xl" mt="200px" py="md">
+            <main>{children}</main>
+          </Container>
         </MantineProvider>
       </body>
     </html>

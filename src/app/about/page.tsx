@@ -4,7 +4,7 @@ import React from "react";
 const AboutPage = () => {
   return (
     <>
-      <Box my="xl" pb="xl">
+      <Box pb="xl">
         <Title
           order={2}
           fw="normal"
@@ -29,8 +29,8 @@ const AboutPage = () => {
         </Title>
         <Box my="md">
           <Text size="lg">
-            フロントエンドのReact/Next.js、バックエンドのDjango REST
-            Frameworkを勉強中。
+            フロントエンドはReact/Next.js、バックエンドはDjango REST
+            Frameworkを勉強中
           </Text>
         </Box>
       </Box>
@@ -59,7 +59,59 @@ const AboutPage = () => {
           クリエイティブコーディング
         </Title>
         <Box my="md">
-          <Text size="lg">今後p5.jsから触っていきたい。</Text>
+          <Text size="lg">p5.js、three.jsを勉強中</Text>
+        </Box>
+      </Box>
+
+      <Box my="xl" pb="xl">
+        <Title
+          order={2}
+          fw="normal"
+          style={{ borderBottom: "1px solid black" }}
+        >
+          クリエイティブコーディング
+        </Title>
+        <Box my="md">
+          <Text size="lg">p5.js、three.jsを勉強中</Text>
+        </Box>
+      </Box>
+
+      <Box my="xl" pb="xl">
+        <Title
+          order={2}
+          fw="normal"
+          style={{ borderBottom: "1px solid black" }}
+        >
+          クリエイティブコーディング
+        </Title>
+        <Box my="md">
+          <Text size="lg">p5.js、three.jsを勉強中</Text>
+        </Box>
+      </Box>
+
+      <Box my="xl" pb="xl">
+        <Title
+          order={2}
+          fw="normal"
+          style={{ borderBottom: "1px solid black" }}
+        >
+          クリエイティブコーディング
+        </Title>
+        <Box my="md">
+          <Text size="lg">p5.js、three.jsを勉強中</Text>
+        </Box>
+      </Box>
+
+      <Box my="xl" pb="xl">
+        <Title
+          order={2}
+          fw="normal"
+          style={{ borderBottom: "1px solid black" }}
+        >
+          クリエイティブコーディング
+        </Title>
+        <Box my="md">
+          <Text size="lg">p5.js、three.jsを勉強中</Text>
         </Box>
       </Box>
     </>
