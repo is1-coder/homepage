@@ -62,58 +62,6 @@ const AboutPage = () => {
           <Text size="lg">p5.js、three.jsを勉強中</Text>
         </Box>
       </Box>
-
-      <Box my="xl" pb="xl">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ borderBottom: "1px solid black" }}
-        >
-          クリエイティブコーディング
-        </Title>
-        <Box my="md">
-          <Text size="lg">p5.js、three.jsを勉強中</Text>
-        </Box>
-      </Box>
-
-      <Box my="xl" pb="xl">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ borderBottom: "1px solid black" }}
-        >
-          クリエイティブコーディング
-        </Title>
-        <Box my="md">
-          <Text size="lg">p5.js、three.jsを勉強中</Text>
-        </Box>
-      </Box>
-
-      <Box my="xl" pb="xl">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ borderBottom: "1px solid black" }}
-        >
-          クリエイティブコーディング
-        </Title>
-        <Box my="md">
-          <Text size="lg">p5.js、three.jsを勉強中</Text>
-        </Box>
-      </Box>
-
-      <Box my="xl" pb="xl">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ borderBottom: "1px solid black" }}
-        >
-          クリエイティブコーディング
-        </Title>
-        <Box my="md">
-          <Text size="lg">p5.js、three.jsを勉強中</Text>
-        </Box>
-      </Box>
     </>
   );
 };

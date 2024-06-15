@@ -67,10 +67,13 @@ const Header = () => {
                   key={index}
                   className="hoverOpacity"
                   href={item.link}
-                  style={{ color: "#222", textDecoration: "none" }}
+                  style={{
+                    color: "#222",
+                    textDecoration: "none",
+                    paddingBottom: "2px",
+                  }}
                   activeStyle={{
                     borderBottom: "1px solid black",
-                    paddingBottom: "4px",
                   }}
                 >
                   <p
