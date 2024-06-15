@@ -4,12 +4,16 @@ import { jost } from "@/utils/fonts";
 import { headerItems } from "./headerItems";
 import ActiveLink from "@/components/ActiveLink/ActiveLink";
 
-const Header = () => {
+type HeaderProps = {
+  height: string;
+};
+
+const Header = ({ height }: HeaderProps) => {
   return (
     <header
       className={jost.className}
       style={{
-        height: "200px",
+        height: height,
         width: "100%",
         position: "fixed",
         top: 0,
@@ -54,7 +58,7 @@ const Header = () => {
             display: "flex",
             alignItems: "baseline",
             justifyContent: "center",
-            gap: "24px",
+            gap: "20px",
           }}
         >
           {headerItems.map((item, index) => {

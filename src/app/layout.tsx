@@ -22,9 +22,9 @@ export default function RootLayout({
       </head>
       <body className={notoSansJP.className}>
         <MantineProvider>
-          <Header />
+          <Header height={"150px"} />
           {/* Headerのheightと同じ値のmtを指定 */}
-          <Container size="xl" mt="200px" py="md">
+          <Container size="xl" mt="150px" py="md">
             <main>{children}</main>
           </Container>
         </MantineProvider>
