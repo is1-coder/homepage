@@ -11,7 +11,7 @@ const ActiveLink = ({ activeStyle, ...props }: ActiveLinkProps) => {
   const pathname = usePathname();
   console.log(pathname);
 
-  return props.href == pathname ? (
+  return pathname.includes(`${props.href}`) ? (
     <Link {...props} style={{ ...props.style, ...activeStyle }}>
       {props.children}
     </Link>

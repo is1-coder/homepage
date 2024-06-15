@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "14.2.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zenn-content-css": "^0.1.154",
+    "zenn-markdown-html": "^0.1.154"
   },
   "devDependencies": {
     "@mantine/core": "^7.9.2",

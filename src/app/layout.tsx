@@ -19,11 +19,15 @@ export default function RootLayout({
     <html lang="ja">
       <head>
         <ColorSchemeScript />
+        <script
+          async
+          src="https://embed.zenn.studio/js/listen-embed-event.js"
+        ></script>
       </head>
       <body className={notoSansJP.className}>
         <MantineProvider>
           <Header />
-          <Container size="xl" p="md">
+          <Container size="md" p="md">
             <main>{children}</main>
           </Container>
         </MantineProvider>
