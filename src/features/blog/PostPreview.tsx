@@ -1,6 +1,7 @@
 import { PostMetadata } from "@/types/post";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 type PostPreviewProps = {
   post: PostMetadata;
@@ -8,13 +9,38 @@ type PostPreviewProps = {
 
 const PostPreview = ({ post }: PostPreviewProps) => {
   return (
-    <div>
-      <Link href={`/blog/${post.slug}`}>
-        <h2>{post.title}</h2>
-      </Link>
-      <p>{post.date}</p>
-      <p>{post.description}</p>
-    </div>
+    <Link
+      className="hoverPostPreview"
+      href={`/blog/${post.slug}`}
+      style={{
+        height: "100%",
+        width: "400px",
+        color: "#222",
+        textDecoration: "none",
+      }}
+    >
+      <div style={{ height: "225px", width: "400px", overflow: "hidden" }}>
+        <Image
+          src={`/images/blog/${
+            post.thumbnail ? `${post.slug}/${post.thumbnail}` : "default.png"
+          }`}
+          alt={`${post.slug}`}
+          height={225}
+          width={400}
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+
+      <div style={{ margin: "8px 0" }}>
+        <p style={{ fontSize: "12px" }}>{post.date}</p>
+        <h2 style={{ fontSize: "24px", lineHeight: "28px", marginTop: "6px" }}>
+          {post.title}
+        </h2>
+        <p style={{ fontSize: "12px", lineHeight: "16px", marginTop: "6px" }}>
+          {post.description}
+        </p>
+      </div>
+    </Link>
   );
 };
 

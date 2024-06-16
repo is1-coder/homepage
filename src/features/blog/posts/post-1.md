@@ -1,11 +1,10 @@
 ---
-title: "test post"
 date: "2024-06-16"
-description: "テスト投稿です"
+title: "zenn markdownの記法について"
+description: "ブログ執筆に使用しているzenn markdownの記法について、備忘録も兼ねてまとめています。"
+thumbnail: "post-1.png"
 ---
 
-# テスト投稿の見出し
+# 見出し
 
-本文はこのフォントサイズ
-
-改行はこれくらいの幅
+本文

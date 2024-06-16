@@ -8,7 +8,7 @@ const AboutPage = () => {
         <Title
           order={2}
           fw="normal"
-          style={{ borderBottom: "1px solid black" }}
+          style={{ display: "inline-block", borderBottom: "1px solid black" }}
         >
           About
         </Title>
@@ -23,7 +23,7 @@ const AboutPage = () => {
         <Title
           order={2}
           fw="normal"
-          style={{ borderBottom: "1px solid black" }}
+          style={{ display: "inline-block", borderBottom: "1px solid black" }}
         >
           web開発
         </Title>
@@ -39,7 +39,7 @@ const AboutPage = () => {
         <Title
           order={2}
           fw="normal"
-          style={{ borderBottom: "1px solid black" }}
+          style={{ display: "inline-block", borderBottom: "1px solid black" }}
         >
           映像
         </Title>
@@ -54,7 +54,7 @@ const AboutPage = () => {
         <Title
           order={2}
           fw="normal"
-          style={{ borderBottom: "1px solid black" }}
+          style={{ display: "inline-block", borderBottom: "1px solid black" }}
         >
           クリエイティブコーディング
         </Title>

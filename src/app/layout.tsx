@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={notoSansJP.className}>
         <MantineProvider>
           <Header />
-          <Container size="md" p="md">
+          <Container size="md" p="xl">
             <main>{children}</main>
           </Container>
         </MantineProvider>
