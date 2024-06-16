@@ -1,18 +1,18 @@
 import PostPreview from "@/features/blog/PostPreview";
-import { getPostMetadata } from "@/features/blog/blog";
+import { getAllPostMetadata } from "@/features/blog/blog";
 import React from "react";
 
 const BlogPage = () => {
-  const postMetadata = getPostMetadata();
+  const postMetadata = getAllPostMetadata().reverse();
 
   return (
     <div
       style={{
         display: "flex",
-        flexDirection: "row-reverse",
-        flexWrap: "wrap-reverse",
+        flexDirection: "row",
+        flexWrap: "wrap",
         justifyContent: "center",
-        alignItems: "flex-end",
+        alignItems: "flex-start",
         gap: "32px",
       }}
     >
