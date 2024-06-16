@@ -29,8 +29,8 @@ const AboutPage = () => {
         </Title>
         <Box my="md">
           <Text size="lg">
-            フロントエンドはReact/Next.js、バックエンドはDjango REST
-            Frameworkを勉強中
+            フロントエンドのReact/Next.js、バックエンドのDjango REST
+            Frameworkを勉強中。
           </Text>
         </Box>
       </Box>
@@ -59,7 +59,7 @@ const AboutPage = () => {
           クリエイティブコーディング
         </Title>
         <Box my="md">
-          <Text size="lg">p5.js、three.jsを勉強中</Text>
+          <Text size="lg">p5.jsでたまに遊びます。three.jsもそのうち。</Text>
         </Box>
       </Box>
     </>
