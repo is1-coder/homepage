@@ -8,7 +8,7 @@ const returnTop = () => {
   });
 };
 
-const ReturnTop = () => {
+const ReturnTopButton = () => {
   return (
     <span
       onClick={returnTop}
@@ -20,4 +20,4 @@ const ReturnTop = () => {
   );
 };
 
-export default ReturnTop;
+export default ReturnTopButton;

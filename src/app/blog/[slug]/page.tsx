@@ -8,8 +8,8 @@ import markdownToHtml from "zenn-markdown-html";
 import "@/app/reset.css";
 import "zenn-content-css";
 import Image from "next/image";
-import ReturnTop from "@/components/ReturnTop/ReturnTop";
 import Link from "next/link";
+import ReturnTopButton from "@/components/ReturnTopButton/ReturnTopButton";
 
 type PostPageProps = {
   params: {
@@ -57,7 +57,7 @@ const PostPage = ({ params: { slug } }: PostPageProps) => {
           alignItems: "center",
         }}
       >
-        <ReturnTop />
+        <ReturnTopButton />
         <span>|</span>
         <Link href="/blog" style={{ textDecoration: "none", color: "#222" }}>
           <span style={{ padding: "16px" }} className="hoverOpacity">
