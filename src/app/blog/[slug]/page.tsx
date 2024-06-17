@@ -8,6 +8,8 @@ import markdownToHtml from "zenn-markdown-html";
 import "@/app/reset.css";
 import "zenn-content-css";
 import Image from "next/image";
+import ReturnTop from "@/components/ReturnTop/ReturnTop";
+import Link from "next/link";
 
 type PostPageProps = {
   params: {
@@ -40,11 +42,29 @@ const PostPage = ({ params: { slug } }: PostPageProps) => {
         alt={`${slug}`}
         height={360}
         width={640}
-        style={{ objectFit: "cover", display: "block", margin: "36px auto" }}
+        // layout="responsive"
+        style={{ objectFit: "cover", display: "block", margin: "40px auto" }}
       />
-      <p style={{ margin: "36px 0" }}>{metadata.description}</p>
+      <p style={{ marginBottom: "64px" }}>{metadata.description}</p>
 
       <div className="znc" dangerouslySetInnerHTML={{ __html: html }} />
+
+      <div
+        style={{
+          marginTop: "64px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <ReturnTop />
+        <span>|</span>
+        <Link href="/blog" style={{ textDecoration: "none", color: "#222" }}>
+          <span style={{ padding: "16px" }} className="hoverOpacity">
+            記事一覧へ戻る
+          </span>
+        </Link>
+      </div>
     </>
   );
 };

@@ -1,6 +1,6 @@
 ---
 date: "2024-06-17"
-title: "EDP 年刊まとめ動画について"
+title: "EDP 年間まとめ動画について"
 description: "workページが完成するまでこちらにブログとして残しておきます。"
 thumbnail: "post-5.png"
 ---
