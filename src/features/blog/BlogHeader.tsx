@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { getPostMetadata } from "@/features/blog/blog";
+import { LuCalendarPlus } from "react-icons/lu";
 
 type BlogHeaderProps = {
   slug: string;
@@ -13,7 +14,10 @@ const BlogHeader = ({ slug, style }: BlogHeaderProps) => {
   return (
     <div style={style}>
       <h1>{metadata.title}</h1>
-      <p style={{ margin: "16px 0" }}>{metadata.date}</p>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <LuCalendarPlus style={{ marginRight: "4px" }} />
+        <p style={{ margin: "16px 0" }}>{metadata.date}</p>
+      </div>
       <Image
         src={`/images/blog/${
           metadata.thumbnail ? `${slug}/${metadata.thumbnail}` : "default.png"
