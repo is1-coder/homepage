@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { FiArrowUpCircle } from "react-icons/fi";
 
 const returnTop = () => {
   window.scroll({
@@ -10,13 +11,19 @@ const returnTop = () => {
 
 const ReturnTopButton = () => {
   return (
-    <span
+    <div
       onClick={returnTop}
-      style={{ cursor: "pointer", padding: "16px" }}
+      style={{
+        cursor: "pointer",
+        padding: "16px",
+        display: "flex",
+        alignItems: "center",
+      }}
       className="hoverOpacity"
     >
-      トップへ戻る
-    </span>
+      <FiArrowUpCircle style={{ marginRight: "4px" }} />
+      <p>トップへ戻る</p>
+    </div>
   );
 };
 
