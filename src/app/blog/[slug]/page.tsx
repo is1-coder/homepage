@@ -25,7 +25,7 @@ const PostPage = ({ params: { slug } }: PostPageProps) => {
       {/* ブログコンテンツ */}
       <div className="znc" dangerouslySetInnerHTML={{ __html: html }} />
 
-      <BlogFooter />
+      <BlogFooter style={{ marginTop: "64px" }} />
     </>
   );
 };

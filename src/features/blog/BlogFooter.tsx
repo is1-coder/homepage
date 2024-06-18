@@ -2,11 +2,15 @@ import ReturnTopButton from "@/components/ReturnTopButton/ReturnTopButton";
 import Link from "next/link";
 import React from "react";
 
-const BlogFooter = () => {
+type BlogFooterProps = {
+  style?: React.CSSProperties;
+};
+
+const BlogFooter = ({ style }: BlogFooterProps) => {
   return (
     <div
       style={{
-        marginTop: "64px",
+        ...style,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
