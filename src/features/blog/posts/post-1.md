@@ -35,7 +35,7 @@ thumbnail: "post-1.png"
 
 リストのアイテムには`-`または`*`が使用できます。`tab` または `space` でインデントします。
 
-## 番号付きリスト
+### 番号付きリスト
 
 ```md
 1. first
@@ -101,6 +101,8 @@ const func = () => {
 
 言語を指定することでシンタックスハイライトを適用できます。([対応言語の一覧](https://prismjs.com/#supported-languages))
 また、`: hello.js`によりファイル名を表示しています。
+
+### 差分表示
 
 ````md
 ```diff js: hello.js
