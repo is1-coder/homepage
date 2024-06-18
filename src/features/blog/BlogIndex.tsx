@@ -1,6 +1,5 @@
 import React from "react";
 import { JSDOM } from "jsdom";
-import Link from "next/link";
 
 type BlogIndexProps = {
   html: string;
@@ -15,7 +14,7 @@ type IndexItem = {
 
 const BlogIndex = ({ html, style }: BlogIndexProps) => {
   const dom = new JSDOM(html).window.document;
-  const elements = dom.querySelectorAll<HTMLElement>("h2, h3");
+  const elements = dom.querySelectorAll<HTMLElement>("h1, h2, h3, h4");
   let indexItems: IndexItem[] = [];
   elements.forEach((element) => {
     const tag = element.tagName;
@@ -47,7 +46,7 @@ const BlogIndex = ({ html, style }: BlogIndexProps) => {
         >
           <p
             style={
-              item.tag === "H2"
+              item.tag === "H1" || item.tag === "H2"
                 ? { fontWeight: "600" }
                 : { fontWeight: "400", color: "#666" }
             }
