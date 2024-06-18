@@ -14,9 +14,9 @@ const BlogHeader = ({ slug, style }: BlogHeaderProps) => {
   return (
     <div style={style}>
       <h1>{metadata.title}</h1>
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
         <LuCalendarPlus style={{ marginRight: "4px" }} />
-        <p style={{ margin: "16px 0" }}>{metadata.date}</p>
+        <p>{metadata.date}</p>
       </div>
       <Image
         src={`/images/blog/${
