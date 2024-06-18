@@ -9,7 +9,6 @@ type ActiveLinkProps = React.ComponentProps<typeof Link> & {
 
 const ActiveLink = ({ activeStyle, ...props }: ActiveLinkProps) => {
   const pathname = usePathname();
-  console.log(pathname);
 
   return pathname.includes(`${props.href}`) ? (
     <Link {...props} style={{ ...props.style, ...activeStyle }}>
