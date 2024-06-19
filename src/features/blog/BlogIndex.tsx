@@ -47,8 +47,8 @@ const BlogIndex = ({ html, style }: BlogIndexProps) => {
           <p
             style={
               item.tag === "H1" || item.tag === "H2"
-                ? { fontWeight: "600" }
-                : { fontWeight: "400", color: "#666" }
+                ? { fontWeight: "500" }
+                : { fontWeight: "400", color: "#666", paddingLeft: "1em" }
             }
           >
             {item.title}
