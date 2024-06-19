@@ -1,15 +1,25 @@
-### 技術スタック
+## 技術スタック
 
 - next.js
 - typescript
 
-ライブラリ
+### ライブラリ
 - mantine
 - gray-matter
 - zenn-markdown-html
 - zenn-content-css
 - react-icons
 - jsdom
+
+## 開発について
+
+以下の場合はissueを立てて、ブランチを切る
+
+- 大きい変更がある
+- 新規ライブラリを追加、利用する
+
+開発予定のタスクもとりあえずissueを立てる
+
 
 #
 
