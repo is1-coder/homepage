@@ -3,8 +3,10 @@ import React from "react";
 import markdownToHtml from "zenn-markdown-html";
 import "@/app/reset.css";
 import "zenn-content-css";
+import "@/features/blog/blog.css";
 import BlogHeader from "@/features/blog/BlogHeader";
 import BlogFooter from "@/features/blog/BlogFooter";
+import BlogIndex from "@/features/blog/BlogIndex";
 
 type PostPageProps = {
   params: {
@@ -19,14 +21,27 @@ const PostPage = ({ params: { slug } }: PostPageProps) => {
   });
 
   return (
-    <>
-      <BlogHeader slug={slug} style={{ marginBottom: "64px" }} />
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "flex-start",
+        gap: 40,
+      }}
+    >
+      <div>
+        <BlogHeader slug={slug} style={{ marginBottom: "64px" }} />
 
-      {/* ブログコンテンツ */}
-      <div className="znc" dangerouslySetInnerHTML={{ __html: html }} />
+        {/* ブログコンテンツ */}
+        <div
+          className="znc innerLink"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
 
-      <BlogFooter style={{ marginTop: "64px" }} />
-    </>
+        <BlogFooter style={{ marginTop: "64px" }} />
+      </div>
+      <BlogIndex html={html} style={{ width: "300px", flexShrink: 0 }} />
+    </div>
   );
 };
 
