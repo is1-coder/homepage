@@ -119,3 +119,7 @@ const func = () => {
 ```
 
 `diff`を設定し、`+`、`-`を行の先頭に入れることで差分表示ができます。
+
+## 参考文献
+
+https://zenn.dev/zenn/articles/markdown-guide

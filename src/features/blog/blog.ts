@@ -2,8 +2,10 @@ import { PostMetadata } from "@/types/post";
 import fs from "fs";
 import matter from "gray-matter";
 
+const postsFolder = "src/_blog";
+
 export const getAllPostMetadata = (): PostMetadata[] => {
-  const folder = "src/features/blog/posts";
+  const folder = postsFolder;
   const files = fs.readdirSync(folder);
   const markdownFiles = files.filter((file) => file.endsWith(".md"));
 
@@ -22,7 +24,7 @@ export const getAllPostMetadata = (): PostMetadata[] => {
 };
 
 export const getPostMetadata = (slug: string): PostMetadata => {
-  const folder = "src/features/blog/posts";
+  const folder = postsFolder;
   const fileName = `${folder}/${slug}.md`;
   const markdownFile = fs.readFileSync(fileName, "utf-8");
 
@@ -37,7 +39,7 @@ export const getPostMetadata = (slug: string): PostMetadata => {
 };
 
 export const getPostContent = (slug: string): string => {
-  const folder = "src/features/blog/posts";
+  const folder = postsFolder;
   const fileName = `${folder}/${slug}.md`;
   const markdownFile = fs.readFileSync(fileName, "utf-8");
 

@@ -24,8 +24,6 @@ const BlogIndex = ({ html, style }: BlogIndexProps) => {
     indexItems.push(record);
   });
 
-  console.log(indexItems);
-
   return (
     <div
       style={{
