@@ -30,7 +30,7 @@ const BlogIndex = ({ html, style }: BlogIndexProps) => {
     <div
       style={{
         ...style,
-        border: "1px solid black",
+        backgroundColor: "#fff",
         padding: 16,
         position: "sticky",
         top: 182,

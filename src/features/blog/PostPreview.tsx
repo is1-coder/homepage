@@ -15,9 +15,12 @@ const PostPreview = ({ post }: PostPreviewProps) => {
       href={`/blog/${post.slug}`}
       style={{
         height: "100%",
-        width: "400px",
+        width: "432px",
         color: "#222",
         textDecoration: "none",
+        backgroundColor: "#fff",
+        padding: "16px",
+        boxShadow: "0px 5px 15px 0px rgba(0, 0, 0, 0.05)",
       }}
     >
       <div style={{ height: "225px", width: "400px", overflow: "hidden" }}>

@@ -24,7 +24,10 @@ export default function RootLayout({
           src="https://embed.zenn.studio/js/listen-embed-event.js"
         ></script>
       </head>
-      <body className={notoSansJP.className}>
+      <body
+        className={notoSansJP.className}
+        style={{ backgroundColor: "#f2f2f2" }}
+      >
         <MantineProvider>
           <Header />
           <Container size="md" p="xl">

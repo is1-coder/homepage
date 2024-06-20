@@ -4,7 +4,7 @@ import React from "react";
 const AboutPage = () => {
   return (
     <>
-      <Box pb="xl">
+      <Box mb="xl" bg="#fff" p="md">
         <Title
           order={2}
           fw="normal"
@@ -19,7 +19,7 @@ const AboutPage = () => {
         </Box>
       </Box>
 
-      <Box my="xl" pb="xl">
+      <Box mb="xl" bg="#fff" p="md">
         <Title
           order={2}
           fw="normal"
@@ -35,7 +35,7 @@ const AboutPage = () => {
         </Box>
       </Box>
 
-      <Box my="xl" pb="xl">
+      <Box mb="xl" bg="#fff" p="md">
         <Title
           order={2}
           fw="normal"
@@ -50,7 +50,7 @@ const AboutPage = () => {
         </Box>
       </Box>
 
-      <Box my="xl" pb="xl">
+      <Box mb="xl" bg="#fff" p="md">
         <Title
           order={2}
           fw="normal"

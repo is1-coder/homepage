@@ -16,7 +16,7 @@ const Header = () => {
           width: "100%",
           position: "fixed",
           top: 0,
-          backgroundColor: "#eee",
+          backgroundColor: "#fff",
           zIndex: 1000,
         }}
       >

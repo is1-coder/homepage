@@ -29,7 +29,7 @@ const PostPage = ({ params: { slug } }: PostPageProps) => {
         gap: 40,
       }}
     >
-      <div>
+      <div style={{ backgroundColor: "#fff", padding: "32px" }}>
         <BlogHeader slug={slug} style={{ marginBottom: "64px" }} />
 
         {/* ブログコンテンツ */}
