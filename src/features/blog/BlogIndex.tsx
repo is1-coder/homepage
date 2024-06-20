@@ -32,6 +32,8 @@ const BlogIndex = ({ html, style }: BlogIndexProps) => {
         padding: 16,
         position: "sticky",
         top: 182,
+        maxHeight: "600px",
+        overflowY: "auto",
       }}
     >
       <h3 style={{ marginBottom: 8 }}>目次</h3>
