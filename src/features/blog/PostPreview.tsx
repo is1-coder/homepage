@@ -20,7 +20,6 @@ const PostPreview = ({ post }: PostPreviewProps) => {
         textDecoration: "none",
         backgroundColor: "#fff",
         padding: "16px",
-        boxShadow: "0px 5px 15px 0px rgba(0, 0, 0, 0.05)",
       }}
     >
       <div style={{ height: "225px", width: "400px", overflow: "hidden" }}>

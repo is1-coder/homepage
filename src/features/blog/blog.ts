@@ -2,7 +2,7 @@ import { PostMetadata } from "@/types/post";
 import fs from "fs";
 import matter from "gray-matter";
 
-const postsFolder = "src/_blog";
+const postsFolder = "public/blog";
 
 export const getAllPostMetadata = (): PostMetadata[] => {
   const folder = postsFolder;

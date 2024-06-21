@@ -39,7 +39,7 @@ const Header = () => {
             }}
           >
             <Link href="/" style={{ textDecoration: "none" }}>
-              <h1
+              <p
                 style={{
                   fontSize: "48px",
                   fontWeight: "500",
@@ -48,7 +48,7 @@ const Header = () => {
                 }}
               >
                 SOSHIDA
-              </h1>
+              </p>
             </Link>
           </div>
 
