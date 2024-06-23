@@ -1,7 +1,7 @@
 import { getPostContent, getAllPostMetadata } from "@/features/blog/blog";
 import React from "react";
 import markdownToHtml from "zenn-markdown-html";
-import "@/app/reset.css";
+// import "@/app/reset.css";
 import "zenn-content-css";
 import "@/features/blog/blog.css";
 import BlogHeader from "@/features/blog/BlogHeader";

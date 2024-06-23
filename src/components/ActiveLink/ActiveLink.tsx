@@ -4,18 +4,18 @@ import React from "react";
 import { usePathname } from "next/navigation";
 
 type ActiveLinkProps = React.ComponentProps<typeof Link> & {
-  activeStyle: React.CSSProperties;
+  activeClassName: string;
 };
 
-const ActiveLink = ({ activeStyle, ...props }: ActiveLinkProps) => {
+const ActiveLink = ({ activeClassName, ...props }: ActiveLinkProps) => {
   const pathname = usePathname();
 
   return pathname.includes(`${props.href}`) ? (
-    <Link {...props} style={{ ...props.style, ...activeStyle }}>
+    <Link {...props} className={`${props.className} ${activeClassName}`}>
       {props.children}
     </Link>
   ) : (
-    <Link {...props} style={props.style}>
+    <Link {...props} className={`${props.className}`}>
       {props.children}
     </Link>
   );

@@ -4,7 +4,8 @@ import React from "react";
 const AboutPage = () => {
   return (
     <>
-      <Box mb="xl" bg="#fff" p="md">
+      <div>about</div>
+      {/* <Box mb="xl" bg="#fff" p="md">
         <Title
           order={2}
           fw="normal"
@@ -61,7 +62,7 @@ const AboutPage = () => {
         <Box my="md">
           <Text size="lg">p5.jsでたまに遊びます。three.jsもそのうち。</Text>
         </Box>
-      </Box>
+      </Box> */}
     </>
   );
 };
