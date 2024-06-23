@@ -9,9 +9,11 @@
 
 :root {
   --color-1: #222;
+  --color-ac-1: #01afd2;
   --bg-color-1: #f2f2f2;
   --bg-color-2: #fff;
   --header-height: 80px;
+  --main-my: 32px;
 }
 
 @media (prefers-color-scheme: dark) {

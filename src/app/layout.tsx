@@ -22,7 +22,9 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <main className="container mx-auto my-8 border">{children}</main>
+        <main className="container mx-auto my-[--main-my] border">
+          {children}
+        </main>
       </body>
     </html>
   );

@@ -6,16 +6,7 @@ const BlogPage = () => {
   const postMetadata = getAllPostMetadata().reverse();
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        gap: "32px",
-      }}
-    >
+    <div className="flex justify-center items-start flex-wrap gap-10">
       {postMetadata.map((post, index) => (
         <PostPreview key={index} post={post} />
       ))}
