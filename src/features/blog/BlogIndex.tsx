@@ -3,7 +3,7 @@ import { JSDOM } from "jsdom";
 
 type BlogIndexProps = {
   html: string;
-  style?: React.CSSProperties;
+  className?: string;
 };
 
 type IndexItem = {
@@ -12,7 +12,7 @@ type IndexItem = {
   href: string;
 };
 
-const BlogIndex = ({ html, style }: BlogIndexProps) => {
+const BlogIndex = ({ html, className }: BlogIndexProps) => {
   const dom = new JSDOM(html).window.document;
   const elements = dom.querySelectorAll<HTMLElement>("h1, h2, h3, h4");
   let indexItems: IndexItem[] = [];
@@ -26,35 +26,23 @@ const BlogIndex = ({ html, style }: BlogIndexProps) => {
 
   return (
     <div
-      style={{
-        ...style,
-        backgroundColor: "#fff",
-        padding: 16,
-        position: "sticky",
-        top: 182,
-        maxHeight: "600px",
-        overflowY: "auto",
-      }}
+      className={`top-[calc(var(--header-height)+var(--main-padding))] bg-[--bg-color-2]
+                  max-h-[600px] w-[300px] sticky p-4 overflow-y-auto ${className} `}
     >
-      <h3 style={{ marginBottom: 8 }}>目次</h3>
-      {indexItems.map((item, index) => (
-        <a
-          href={`#${item.href}`}
-          key={index}
-          style={{ textDecoration: "none", color: "#222" }}
-          className="hoverOpacity"
-        >
-          <p
-            style={
-              item.tag === "H1" || item.tag === "H2"
-                ? { fontWeight: "500" }
-                : { fontWeight: "400", color: "#666", paddingLeft: "1em" }
-            }
+      <h3>目次</h3>
+      <div className="mt-4 ml-2">
+        {indexItems.map((item, index) => (
+          <a
+            href={`#${item.href}`}
+            key={index}
+            className={`mt-2 block opacity-60 hover:opacity-[1] ${
+              (item.tag === "H1" || item.tag === "H2") && "font-[700]"
+            }`}
           >
             {item.title}
-          </p>
-        </a>
-      ))}
+          </a>
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,39 +1,37 @@
-import ReturnTopButton from "@/components/ReturnTopButton/ReturnTopButton";
+"use client";
 import Link from "next/link";
 import React from "react";
 import { FaRegListAlt } from "react-icons/fa";
+import { FiArrowUpCircle } from "react-icons/fi";
 
-type BlogFooterProps = {
-  style?: React.CSSProperties;
+const returnTop = () => {
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 
-const BlogFooter = ({ style }: BlogFooterProps) => {
+type BlogFooterProps = {
+  className?: string;
+};
+
+const BlogFooter = ({ className }: BlogFooterProps) => {
   return (
-    <div
-      style={{
-        ...style,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <ReturnTopButton />
+    <div className={`${className} flex justify-center items-center`}>
+      <div
+        className="cursor-pointer p-4 flex item-scenter opacity-70 hover:opacity-[1]"
+        onClick={returnTop}
+      >
+        <FiArrowUpCircle />
+        <p className="ml-1">トップへ戻る</p>
+      </div>
       <span style={{ userSelect: "none" }}>|</span>
-      <Link href="/blog" style={{ textDecoration: "none", color: "#222" }}>
-        <div
-          style={{
-            cursor: "pointer",
-            padding: "16px",
-            display: "flex",
-            alignItems: "center",
-          }}
-          className="hoverOpacity"
-        >
-          <FaRegListAlt
-            style={{ marginRight: "4px", position: "relative", top: "1px" }}
-          />
-          <p>記事一覧へ戻る</p>
-        </div>
+      <Link
+        href="/blog"
+        className="cursor-pointer p-4 flex item-scenter opacity-70 hover:opacity-[1]"
+      >
+        <FaRegListAlt className="relative top-[1px]" />
+        <p className="ml-1">記事一覧へ戻る</p>
       </Link>
     </div>
   );

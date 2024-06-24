@@ -13,7 +13,7 @@
   --bg-color-1: #f2f2f2;
   --bg-color-2: #fff;
   --header-height: 80px;
-  --main-my: 32px;
+  --main-padding: 32px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,22 +38,22 @@ body {
   }
 }
 
-.hoverOpacity {
-  &:hover {
-    opacity: 0.5;
-  }
+h1 {
+  font-size: 32px;
+  font-weight: bold;
 }
 
-.hoverBackgroundColor {
-  &:hover {
-    background-color: #f0f0f0;
-  }
+h2 {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.hoverPostPreview {
-  &:hover {
-    img {
-      transform: scale(1.1);
-    }
-  }
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
 }

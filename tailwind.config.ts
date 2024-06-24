@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config: Config = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
@@ -14,6 +15,10 @@ const config: Config = {
       fontFamily: {
         noto: ["Noto Sans Jp", "sans-serif"],
         jost: ["Jost", "sans-serif"],
+      },
+      screens: {
+        md: "768px",
+        lg: "1024px",
       },
     },
   },
