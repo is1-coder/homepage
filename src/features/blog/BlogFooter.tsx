@@ -25,7 +25,7 @@ const BlogFooter = ({ className }: BlogFooterProps) => {
         <FiArrowUpCircle />
         <p className="ml-1">トップへ戻る</p>
       </div>
-      <span style={{ userSelect: "none" }}>|</span>
+      <span className="select-none">|</span>
       <Link
         href="/blog"
         className="cursor-pointer p-4 flex item-scenter opacity-70 hover:opacity-[1]"

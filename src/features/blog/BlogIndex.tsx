@@ -20,6 +20,7 @@ const BlogIndex = ({ html, className }: BlogIndexProps) => {
     const tag = element.tagName;
     const title = element.innerHTML.split("</a> ")[1];
     const href = element.id;
+    console.log(href);
     const record: IndexItem = { tag, title, href };
     indexItems.push(record);
   });

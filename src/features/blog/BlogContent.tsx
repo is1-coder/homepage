@@ -7,7 +7,12 @@ type BlogContentProps = {
 };
 
 const BlogContent = ({ html }: BlogContentProps) => {
-  return <div className="znc" dangerouslySetInnerHTML={{ __html: html }} />;
+  return (
+    <div
+      className="znc blog-heading"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
 };
 
 export default BlogContent;
