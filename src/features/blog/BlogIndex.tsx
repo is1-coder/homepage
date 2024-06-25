@@ -30,16 +30,17 @@ const BlogIndex = ({ html, className }: BlogIndexProps) => {
                   max-h-[600px] w-[300px] sticky p-4 overflow-y-auto ${className} `}
     >
       <h3>目次</h3>
-      <div className="mt-4 ml-2">
+      <div className="mt-4">
         {indexItems.map((item, index) => (
           <a
             href={`#${item.href}`}
             key={index}
-            className={`mt-2 block opacity-60 hover:opacity-[1] ${
+            className={`mt-2 opacity-60 hover:opacity-[1] flex items-start ${
               (item.tag === "H1" || item.tag === "H2") && "font-[700]"
             }`}
           >
-            {item.title}
+            <p>{item.tag === "H1" || item.tag === "H2" ? "・" : "　"}</p>
+            <p className="leading-5">{item.title}</p>
           </a>
         ))}
       </div>
