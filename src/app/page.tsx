@@ -1,16 +1,13 @@
 export default function Home() {
   return (
-    <div style={{ border: "1px solid black" }}>
-      <h2>開発中</h2>
-      <p>コンテンツあり</p>
-      <ul>
+    <div>
+      <h2>SOSHIDAホームページ（開発中）</h2>
+      <p className="my-4">コンテンツあり</p>
+      <ul className="ml-4 flex flex-col gap-2">
         <li>About</li>
-        <li>Blog</li>
+        <li>Blog（現状のメインコンテンツ）</li>
         <li>Link</li>
       </ul>
-
-      <p className="my-[4px] text-xl">テキスト</p>
-      <h2 className="">テキスト</h2>
     </div>
   );
 }
