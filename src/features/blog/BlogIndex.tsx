@@ -40,7 +40,7 @@ const BlogIndex = ({ html, className }: BlogIndexProps) => {
             }`}
           >
             <p>{item.tag === "H1" || item.tag === "H2" ? "・" : "　"}</p>
-            <p className="leading-5">{item.title}</p>
+            <p className="leading-[1.2]">{item.title}</p>
           </a>
         ))}
       </div>

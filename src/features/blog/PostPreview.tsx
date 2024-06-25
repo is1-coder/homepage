@@ -31,7 +31,7 @@ const PostPreview = ({ post }: PostPreviewProps) => {
         <h2 className="text-xl font-[600] mt-4 group-hover:text-[--color-ac-1]">
           {post.title}
         </h2>
-        <p className="text-xs mt-2">{post.description}</p>
+        <p className="text-xs mt-2 leading-[1.3]">{post.description}</p>
       </div>
     </Link>
   );
