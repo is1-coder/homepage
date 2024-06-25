@@ -2,21 +2,22 @@ import React from "react";
 import Image from "next/image";
 import { getPostMetadata } from "@/features/blog/blog";
 import { LuCalendarPlus } from "react-icons/lu";
+import "zenn-content-css";
 
 type BlogHeaderProps = {
   slug: string;
-  style?: React.CSSProperties;
+  className?: string;
 };
 
-const BlogHeader = ({ slug, style }: BlogHeaderProps) => {
+const BlogHeader = ({ slug, className }: BlogHeaderProps) => {
   const metadata = getPostMetadata(slug);
 
   return (
-    <div style={style}>
-      <h1>{metadata.title}</h1>
-      <div style={{ display: "flex", alignItems: "center", marginTop: "16px" }}>
-        <LuCalendarPlus style={{ marginRight: "4px" }} />
-        <p>{metadata.date}</p>
+    <div className={`${className}`}>
+      <h1 className="text-[28px]">{metadata.title}</h1>
+      <div className="flex items-center mt-6">
+        <LuCalendarPlus />
+        <p className="ml-2">{metadata.date}</p>
       </div>
       <Image
         src={`/images/blog/${
@@ -25,10 +26,9 @@ const BlogHeader = ({ slug, style }: BlogHeaderProps) => {
         alt={`${slug}`}
         height={360}
         width={640}
-        // layout="responsive"
-        style={{ objectFit: "cover", display: "block", margin: "40px auto" }}
+        className="max-w-[80%] aspect-video object-cover object-center overflow-hidden mx-auto  my-10"
       />
-      <p>{metadata.description}</p>
+      <p className="znc">{metadata.description}</p>
     </div>
   );
 };

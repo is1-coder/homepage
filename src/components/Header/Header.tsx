@@ -1,93 +1,33 @@
 import Link from "next/link";
 import React from "react";
-import { jost } from "@/utils/fonts";
 import { headerItems } from "./headerItems";
 import ActiveLink from "@/components/ActiveLink/ActiveLink";
 
 const Header = () => {
-  const headerHeight = "150px";
-
   return (
-    <div style={{ height: headerHeight }}>
-      <header
-        className={jost.className}
-        style={{
-          height: headerHeight,
-          width: "100%",
-          position: "fixed",
-          top: 0,
-          backgroundColor: "#fff",
-          zIndex: 1000,
-        }}
-      >
-        <div
-          style={{
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          {/* headerロゴ */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "16px",
-            }}
-          >
-            <Link href="/" style={{ textDecoration: "none" }}>
-              <p
-                style={{
-                  fontSize: "48px",
-                  fontWeight: "500",
-                  color: "#222",
-                  letterSpacing: "1px",
-                }}
-              >
-                SOSHIDA
-              </p>
-            </Link>
-          </div>
+    <div className="h-[--header-height]">
+      <header className="h-[--header-height] w-full fixed top-0 z-40 font-jost bg-[--bg-color-2]">
+        <div className="h-full container mx-auto flex items-center justify-start">
+          {/* ロゴ */}
+          <Link href="/" className="text-[40px] font-[600] tracking-[1px] ml-2">
+            SOSHIDA
+          </Link>
 
-          {/* headerアイテム */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              justifyContent: "center",
-              gap: "20px",
-            }}
-          >
+          {/* ナビゲーション */}
+          <nav className="h-full ml-10 hidden md:flex justify-center gap-6 ">
             {headerItems.map((item, index) => {
               return (
                 <ActiveLink
                   key={index}
-                  className="hoverOpacity"
                   href={item.link}
-                  style={{
-                    color: "#222",
-                    textDecoration: "none",
-                    paddingBottom: "2px",
-                  }}
-                  activeStyle={{
-                    borderBottom: "1px solid black",
-                  }}
+                  className="leading-[--header-height] text-lg font-[500] opacity-50 hover:opacity-[1]"
+                  activeClassName="opacity-[1]"
                 >
-                  <p
-                    style={{
-                      fontSize: "20px",
-                      fontWeight: "400",
-                    }}
-                  >
-                    {item.name}
-                  </p>
+                  {item.name}
                 </ActiveLink>
               );
             })}
-          </div>
+          </nav>
         </div>
       </header>
     </div>

@@ -1,23 +1,9 @@
-.innerLink h1 a {
+.blog-heading h1 a,
+.blog-heading h2 a,
+.blog-heading h3 a,
+.blog-heading h4 a {
+  pointer-events: none;
   display: block;
-  padding-top: 170px;
-  margin-top: -170px;
-}
-
-.innerLink h2 a {
-  display: block;
-  padding-top: 170px;
-  margin-top: -170px;
-}
-
-.innerLink h3 a {
-  display: block;
-  padding-top: 170px;
-  margin-top: -170px;
-}
-
-.innerLink h4 a {
-  display: block;
-  padding-top: 170px;
-  margin-top: -170px;
+  padding-top: var(--header-height);
+  margin-top: calc(-1 * var(--header-height));
 }

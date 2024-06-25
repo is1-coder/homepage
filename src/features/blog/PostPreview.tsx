@@ -10,19 +10,8 @@ type PostPreviewProps = {
 
 const PostPreview = ({ post }: PostPreviewProps) => {
   return (
-    <Link
-      className="hoverPostPreview"
-      href={`/blog/${post.slug}`}
-      style={{
-        height: "100%",
-        width: "432px",
-        color: "#222",
-        textDecoration: "none",
-        backgroundColor: "#fff",
-        padding: "16px",
-      }}
-    >
-      <div style={{ height: "225px", width: "400px", overflow: "hidden" }}>
+    <Link href={`/blog/${post.slug}`} className="group p-5 bg-[--bg-color-2]">
+      <div className="max-h-[225px] max-w-[400px]  overflow-hidden">
         <Image
           src={`/images/blog/${
             post.thumbnail ? `${post.slug}/${post.thumbnail}` : "default.png"
@@ -30,21 +19,19 @@ const PostPreview = ({ post }: PostPreviewProps) => {
           alt={`${post.slug}`}
           height={225}
           width={400}
-          style={{ objectFit: "cover" }}
+          className="aspect-video object-cover object-center group-hover:scale-110"
         />
       </div>
 
-      <div style={{ margin: "8px 0" }}>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <LuCalendarPlus size="12px" style={{ marginRight: "4px" }} />
-          <p style={{ fontSize: "12px" }}>{post.date}</p>
+      <div className="max-w-[400px] mt-4">
+        <div className="flex items-center">
+          <LuCalendarPlus size="12px" />
+          <p className="text-xs ml-1">{post.date}</p>
         </div>
-        <h2 style={{ fontSize: "24px", lineHeight: "28px", marginTop: "6px" }}>
+        <h2 className="text-xl font-[600] mt-4 group-hover:text-[--color-ac-1]">
           {post.title}
         </h2>
-        <p style={{ fontSize: "12px", lineHeight: "16px", marginTop: "6px" }}>
-          {post.description}
-        </p>
+        <p className="text-xs mt-2 leading-[1.3]">{post.description}</p>
       </div>
     </Link>
   );

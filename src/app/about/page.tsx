@@ -1,68 +1,16 @@
-import { Box, Text, Title } from "@mantine/core";
 import React from "react";
+import { aboutItems } from "@/features/about/aboutItems";
 
 const AboutPage = () => {
   return (
-    <>
-      <Box mb="xl" bg="#fff" p="md">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ display: "inline-block", borderBottom: "1px solid black" }}
-        >
-          About
-        </Title>
-        <Box my="md">
-          <Text size="lg">
-            web開発、映像、クリエイティブコーディングに興味がある大学生。
-          </Text>
-        </Box>
-      </Box>
-
-      <Box mb="xl" bg="#fff" p="md">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ display: "inline-block", borderBottom: "1px solid black" }}
-        >
-          web開発
-        </Title>
-        <Box my="md">
-          <Text size="lg">
-            フロントエンドのReact/Next.js、バックエンドのDjango REST
-            Frameworkを勉強中。
-          </Text>
-        </Box>
-      </Box>
-
-      <Box mb="xl" bg="#fff" p="md">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ display: "inline-block", borderBottom: "1px solid black" }}
-        >
-          映像
-        </Title>
-        <Box my="md">
-          <Text size="lg">
-            使用ソフトはAfter EffectsとBlender。Houdiniに興味あり。
-          </Text>
-        </Box>
-      </Box>
-
-      <Box mb="xl" bg="#fff" p="md">
-        <Title
-          order={2}
-          fw="normal"
-          style={{ display: "inline-block", borderBottom: "1px solid black" }}
-        >
-          クリエイティブコーディング
-        </Title>
-        <Box my="md">
-          <Text size="lg">p5.jsでたまに遊びます。three.jsもそのうち。</Text>
-        </Box>
-      </Box>
-    </>
+    <div className="flex flex-col gap-4">
+      {aboutItems.map((item, index) => (
+        <div key={index} className="p-4 bg-[--bg-color-2] max-w-fit ">
+          <h2>{item.title}</h2>
+          <p className="mt-3 leading-5">{item.desctipotion}</p>
+        </div>
+      ))}
+    </div>
   );
 };
 

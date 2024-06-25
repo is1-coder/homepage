@@ -1,25 +1,59 @@
-* {
+/* Noto Sans JP */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+/* Jost */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-1: #222;
+  --color-ac-1: #01afd2;
+  --bg-color-1: #f2f2f2;
+  --bg-color-2: #fff;
+  --header-height: 80px;
+  --main-padding: 32px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-1: #222;
+    --bg-color-1: #f2f2f2;
+  }
+}
+
+body {
+  color: var(--color-1);
+  background: var(--bg-color-1);
+  font-family: "Noto Sans JP", sans-serif;
   padding: 0;
   margin: 0;
-  line-height: 1em;
+  line-height: 1;
 }
 
-.hoverOpacity {
-  &:hover {
-    opacity: 0.5;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
 
-.hoverBackgroundColor {
-  &:hover {
-    background-color: #f0f0f0;
-  }
+h1 {
+  font-size: 32px;
+  font-weight: bold;
 }
 
-.hoverPostPreview {
-  &:hover {
-    img {
-      transform: scale(1.1);
-    }
-  }
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: bold;
 }
