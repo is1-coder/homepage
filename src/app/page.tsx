@@ -8,6 +8,7 @@ export default function Home() {
         <li>Blog（現状のメインコンテンツ）</li>
         <li>Link</li>
       </ul>
+      {/* todo: spのときはモーダルでナビゲーション*/}
       <p className="my-4 text-red-500 block md:hidden">
         PC表示にするとヘッダーにナビゲーションが現れます
       </p>
