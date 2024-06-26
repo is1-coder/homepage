@@ -1,8 +1,6 @@
-import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import { AiFillGithub } from "react-icons/ai";
-import { RxOpenInNewWindow } from "react-icons/rx";
 import SocialLink from "@/features/link/SocialLink";
 
 const LinkPage = () => {
