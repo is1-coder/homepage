@@ -2,9 +2,9 @@
 
 - next.js
 - typescript
+- tailwind css
 
 ### ライブラリ
-- mantine
 - gray-matter
 - zenn-markdown-html
 - zenn-content-css
