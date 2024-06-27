@@ -19,7 +19,7 @@ const PostPreview = ({ post }: PostPreviewProps) => {
           alt={`${post.slug}`}
           height={225}
           width={400}
-          className="aspect-video object-cover object-center group-hover:scale-110"
+          className="aspect-video object-cover object-center transition group-hover:scale-110"
         />
       </div>
 
